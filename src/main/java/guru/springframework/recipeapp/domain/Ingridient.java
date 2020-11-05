@@ -17,6 +17,15 @@ public class Ingridient {
     @ManyToOne
     private Recipe recipe;
 
+    public Ingridient() {
+    }
+
+    public Ingridient(String description, BigDecimal amount, UnitOfMeasure unitOfMeasure) {
+        this.description = description;
+        this.amount = amount;
+        this.unitOfMeasure = unitOfMeasure;
+    }
+
     public Long getId() {
         return id;
     }
